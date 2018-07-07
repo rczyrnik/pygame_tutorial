@@ -1,7 +1,5 @@
 '''
-Change the rectangle's color when we click on the rectangle
-
-may have to run with pythonw, not python
+Chank the screen's background when we pet the dog
 '''
 
 # Import
@@ -11,6 +9,7 @@ import random
 
 # Initialize Pygame
 pygame.init()
+pygame.display.set_caption("Pet The Dog!")
 pygame.mouse.set_visible(0)
 
 # Create The Screen

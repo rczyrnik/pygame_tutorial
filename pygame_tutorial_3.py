@@ -1,7 +1,5 @@
 '''
 Change the rectangle's color when we click on the moving rectangle
-
-may have to run with pythonw, not python
 '''
 
 # Import

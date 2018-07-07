@@ -1,7 +1,5 @@
 '''
 Draws a rectangle to the screen
-
-may have to run with pythonw, not python
 '''
 
 # Import Pygame

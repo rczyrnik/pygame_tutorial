@@ -1,7 +1,5 @@
 '''
 Change the background color when we click on the image
-
-may have to run with pythonw, not python
 '''
 
 # Import

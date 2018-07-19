@@ -1,44 +1,63 @@
 '''
-Change the rectangle's color when we click
+Change the rectangle's color when we click anywhere
 '''
 
-# Import
+# IMPORTS
 import sys
 import pygame
-import random
+''' ADD ME! '''
+import random  # <-- HERE!
 
 
-# Initialize Pygame
+# INITIALIZE PYGAME
 pygame.init()
 
-# Create The Screen
+
+# CREATE THE SCREEN -------------------------------
+
+                              # width, height
 screen = pygame.display.set_mode((400, 300))
-screen.fill((100,100,200))
 
-# Add A Rectangle
-my_rect = pygame.Surface((100,50))
-my_rect.fill((0,0,255))
+            # red, green, blue
+screen.fill( (100, 100,   200)  )
 
-# Display It All To The Screen
-screen.blit(my_rect, (200,150))
+
+# ADD A RECTANGLE ---------------------------------
+
+                        # width, height
+my_shape = pygame.Surface((100,   50))
+
+              # red, green, blue
+my_shape.fill( (0,   0,     255) )
+
+my_shape_rect = my_shape.get_rect()
+
+                        # x, y
+my_shape_rect.topleft = (200,150)
+
+# DISPLAY IT ALL ----------------------------------
+
+screen.blit(my_shape, my_shape_rect)
+
 pygame.display.update()
 
-# Run The Game
+
+# RUN THE GAME ------------------------------------
+''' CHANGE ME! '''
 while True:
     for event in pygame.event.get():
-
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
-        elif event.type == pygame.MOUSEBUTTONDOWN:
+        elif event.type == pygame.MOUSEBUTTONDOWN:  #   <-- ADD ME!
 
-            # Color The Rectangle
-            red = random.randint(0, 255)
-            blue = random.randint(0, 255)
-            green = random.randint(0, 255)
-            my_rect.fill((red, blue, green))
+            red = random.randint(0, 255)            #   <-- ADD ME!
+            blue = random.randint(0, 255)           #   <-- ADD ME!
+            green = random.randint(0, 255)          #   <-- ADD ME!
+            my_shape.fill((red, green, blue))       #   <-- ADD ME!
 
-            # Display It All To The Screen
-            screen.blit(my_rect, (200,150))
-            pygame.display.update()
+    # Display It All To The Screen              #   <-- ADD ME!
+    screen.fill((100,100,200))                  #   <-- ADD ME!
+    screen.blit(my_shape, my_shape_rect)        #   <-- ADD ME!
+    pygame.display.update()                     #   <-- ADD ME!

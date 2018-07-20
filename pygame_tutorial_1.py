@@ -16,7 +16,7 @@ pygame.init()
 # CREATE THE SCREEN -------------------------------
 
                               # width, height
-screen = pygame.display.set_mode((400, 300))
+screen = pygame.display.set_mode((700, 500))
 
             # red, green, blue
 screen.fill( (100, 100,   200)  )

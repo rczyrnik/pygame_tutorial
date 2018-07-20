@@ -15,8 +15,8 @@ pygame.init()
 # CREATE THE SCREEN -------------------------------
 
 ''' ADD ME! '''
-screen_width=400
-screen_height=300
+screen_width=700
+screen_height=500
 
 ''' CHANGE ME '''
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -68,12 +68,13 @@ while True:
 
 
     ''' ADD ME! '''
+    # Move Rectangles's Position
+    my_shape_rect = my_shape_rect.move((amt_to_move, 0))              # <-- Add me!
+
     # Check If Went Off Edge
     if my_shape_rect.right > screen_width or my_shape_rect.left < 0:  # <-- Add me!
         amt_to_move *= -1                                             # <-- Add me!
 
-    # Move Rectangles's Position
-    my_shape_rect = my_shape_rect.move((amt_to_move, 0))              # <-- Add me!
 
 
     # Display It All To The Screen

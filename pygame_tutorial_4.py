@@ -14,7 +14,6 @@ pygame.init()
 
 # CREATE THE SCREEN -------------------------------
 
-
 screen_width=400
 screen_height=300
 
@@ -29,8 +28,7 @@ screen.fill( (red, blue, green)  )
 
 ''' CHANGE ME '''
 my_shape = pygame.image.load('img/white_dog.png')      # <-- Change me!
-my_shape = pygame.transform.scale(my_shape, (80,60))   # <-- Change me!
-
+my_shape = pygame.transform.smoothscale(my_shape, (80,60))   # <-- Change me!
 
 my_shape_rect = my_shape.get_rect()
 
